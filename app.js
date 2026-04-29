@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:5000/api/chat';
+const API_BASE = 'http://localhost:5157/api/chat';
 
 let sessionId = localStorage.getItem('vkusvill_session_id');
 if (!sessionId) {
