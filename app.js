@@ -154,19 +154,12 @@ function parseFinalAnswer(text) {
         return { text: escapeHtml(text), productsHtml: null };
     }
 
-    const textBefore = text.substring(0, match.index).trim();
-    const textAfter = text.substring(match.index + match[0].length).trim();
-    const combinedText = (textBefore + (textAfter ? '\n' + textAfter : '')).trim();
-
     try {
         const parsed = JSON.parse(match[1]);
 
         if (parsed.products && Array.isArray(parsed.products) && parsed.products.length > 0) {
             const productsHtml = renderProducts(parsed.products);
-            return {
-                text: escapeHtml(combinedText),
-                productsHtml
-            };
+            return { text: '', productsHtml };
         }
     } catch { /* not valid JSON, show as text */ }
 
