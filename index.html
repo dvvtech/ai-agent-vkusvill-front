@@ -10,13 +10,27 @@
     <div class="app">
         <header class="header">
             <h1>Вкусовилл AI</h1>
-            <button id="newCartBtn" class="btn-new-cart" title="Начать новую корзину">Новая корзина</button>
+            <div class="header-actions">
+                <button id="cartBtn" class="btn-cart" title="Корзина">
+                    Корзина <span id="cartCount" class="cart-count">0</span>
+                </button>
+                <button id="newCartBtn" class="btn-new-cart" title="Начать новую корзину">Новая корзина</button>
+            </div>
         </header>
 
         <div id="chatArea" class="chat-area">
             <div class="welcome">
                 Привет! Я помогу собрать корзину покупок. Напишите, что ищете.
             </div>
+        </div>
+
+        <div id="cartPanel" class="cart-panel hidden">
+            <div class="cart-panel-header">
+                <h3>Корзина</h3>
+                <button id="closeCartBtn" class="btn-close-cart">&times;</button>
+            </div>
+            <div id="cartItems" class="cart-items"></div>
+            <div id="cartEmpty" class="cart-empty">Корзина пуста</div>
         </div>
 
         <div class="input-area">
