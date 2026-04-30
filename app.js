@@ -1,4 +1,5 @@
-const API_BASE = 'http://localhost:5157/chat';
+const API_BASE = 'https://api.cloud-platform.pro/ai-agent-vkusvill/chat';
+//const API_BASE = 'http://localhost:5157/chat';
 
 let sessionId = localStorage.getItem('vkusvill_session_id');
 if (!sessionId) {
